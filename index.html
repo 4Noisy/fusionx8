@@ -83,7 +83,8 @@
   .hero-meta{display:grid;grid-template-columns:repeat(3,auto);gap:clamp(20px,5vw,64px);justify-content:start;margin-top:56px;padding-top:28px;border-top:1px solid var(--line-dark)}
   .hero-meta b{display:block;font:400 clamp(1.6rem,3vw,2.3rem)/1 var(--display);letter-spacing:.02em}
   .hero-meta span{font-size:.85rem;color:var(--muted-dark)}
-  .hero-badge{position:absolute;right:max(16px,calc((100vw - 1200px)/2));top:130px;width:clamp(120px,15vw,190px);height:clamp(120px,15vw,190px);filter:drop-shadow(0 20px 40px rgba(0,0,0,.6))}
+  .hero-row{display:flex;justify-content:space-between;align-items:flex-end;gap:32px}
+  .hero-badge{flex:none;width:clamp(120px,14vw,180px);height:clamp(120px,14vw,180px);filter:drop-shadow(0 20px 40px rgba(0,0,0,.6))}
   @media (max-width:640px){.hero-badge{display:none}.hero-meta{grid-template-columns:repeat(3,1fr);gap:12px}}
 
   /* ---------- marquee ---------- */
@@ -265,14 +266,18 @@
     <div class="hero-bg">
       <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=2000&q=70" alt="" fetchpriority="high">
     </div>
-    <svg class="logo hero-badge" aria-hidden="true"><use href="#logo"/></svg>
     <div class="wrap">
       <div class="status" id="status" role="status"><i></i><span>Revisando horario…</span></div>
       <h1><span class="line">Café que <em>se siente.</em></span><span class="line"><span class="outline">Helado</span> que se comparte.</span></h1>
-      <p class="lead">Cafetería y heladería en Ciudad del Sol, Puente Alto. Café, pastelería de la casa y helados para la tarde, con terraza para quedarse.</p>
-      <div class="hero-ctas">
-        <a class="btn btn-red" href="#carta">Ver la carta</a>
-        <a class="btn btn-ghost" href="#visita">Horarios y dirección</a>
+      <div class="hero-row">
+        <div>
+          <p class="lead">Cafetería y heladería en Ciudad del Sol, Puente Alto. Café, pastelería de la casa y helados para la tarde, con terraza para quedarse.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-red" href="#carta">Ver la carta</a>
+            <a class="btn btn-ghost" href="#visita">Horarios y dirección</a>
+          </div>
+        </div>
+        <svg class="logo hero-badge" aria-hidden="true"><use href="#logo"/></svg>
       </div>
       <div class="hero-meta">
         <div><b>+9.400</b><span>seguidores en Instagram</span></div>
